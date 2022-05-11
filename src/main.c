@@ -71,6 +71,7 @@
 #define PI 3.14
 
 #include "minipro/static.h"
+#include "io/test.h"
 
 // 修饰全局变量
 static int i = 100;
@@ -90,10 +91,12 @@ int main()
     // // 经典问题
 	// printf("%d\n", define(i++, j++));
 
-	func_c();
+	//func_c();
 
 	// 使用被 static 修饰的函数
-	call_func_d();
+	//call_func_d();
+
+	call_area();
 	return (0);
 }
 

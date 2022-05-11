@@ -42,16 +42,16 @@
  *
  */
 
-int main(int argc, char const *argv[])
-{
-    /* code */
-    int a = 1, b = 2, c = 3, d = 4;
-    int m = 1, n = 1;
+// int main(int argc, char const *argv[])
+// {
+//     /* code */
+//     int a = 1, b = 2, c = 3, d = 4;
+//     int m = 1, n = 1;
 
-    // 逻辑运算符的短路特性
-    (m = (a > b)) && (n = (c > d));
-    printf("m = %d\n n = %d", m, n);
-    // 结果：m = 0 n = 1; 与运算当 m = (a > b）为 假时，不会再计算 (n = (c > d))
-    return 0;
-}
+//     // 逻辑运算符的短路特性
+//     (m = (a > b)) && (n = (c > d));
+//     printf("m = %d\n n = %d", m, n);
+//     // 结果：m = 0 n = 1; 与运算当 m = (a > b）为 假时，不会再计算 (n = (c > d))
+//     return 0;
+// }
 

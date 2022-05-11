@@ -4,6 +4,7 @@
 
 #define LEN 3
 
+#if 0
 int main(int argc, char const *argv[])
 {
     
@@ -47,3 +48,5 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+
+#endif
