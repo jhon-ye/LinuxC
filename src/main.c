@@ -97,6 +97,7 @@ int main()
 	//call_func_d();
 
 	call_area();
+	// call_root();
 	return (0);
 }
 
