@@ -72,6 +72,7 @@
 
 #include "minipro/static.h"
 #include "io/test.h"
+#include "array/array.h"
 
 // 修饰全局变量
 static int i = 100;
@@ -96,8 +97,20 @@ int main()
 	// 使用被 static 修饰的函数
 	//call_func_d();
 
-	call_area();
+	//	call_area();
 	// call_root();
+
+
+	// array.h
+	//test();
+
+	//fibonacci();
+
+	//buddle_sort();
+
+	//selection_sort();
+
+	base_converter();
 	return (0);
 }
 
