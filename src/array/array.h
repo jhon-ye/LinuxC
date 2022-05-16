@@ -18,4 +18,6 @@ void max(void);
 
 void sum(void);
 
+void mul(void);
+
 #endif

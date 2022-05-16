@@ -97,7 +97,7 @@ void sum(void)
         }
     }
 
-     for (int i = 0; i < X; i++)
+    for (int i = 0; i < X; i++)
     {
         for (int j = 0; j < Y; j++)
         {
@@ -105,4 +105,34 @@ void sum(void)
         }
         printf("\n");
     }
+}
+
+#define R 2
+#define C 3
+void mul(void)
+{
+    int a[R][C] = {{1,2,3}, {4,5,6}}, b[C][R] = {{7,8,9}, {10,11,12}};
+    int mul[R][R] = {0};
+
+    for (int i = 0; i < R; i++)
+    {
+        for (int j = 0; j < R; j++)
+        {
+            for (int k = 0; k < C; k++)
+            {
+                mul[i][j] += a[i][k] * b[k][j];
+            }
+            
+        }
+    }
+
+    for (int i = 0; i < R; i++)
+    {
+        for (int j = 0; j < R; j++)
+        {
+            printf("%4d", mul[i][j]);
+        }
+        printf("\n");
+    }
+    exit(0);
 }

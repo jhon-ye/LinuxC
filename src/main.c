@@ -114,7 +114,8 @@ int main()
 	//prime_num();
 	//revert();
 	// max();
-	sum();
+	// sum();
+	mul();
 	return (0);
 }
 
