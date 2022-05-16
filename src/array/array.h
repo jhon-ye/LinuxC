@@ -14,4 +14,8 @@ void prime_num(void);
 
 void revert(void);
 
+void max(void);
+
+void sum(void);
+
 #endif

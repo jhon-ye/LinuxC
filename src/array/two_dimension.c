@@ -35,7 +35,74 @@ void two_dim_test(void)
     int arr2[DIM_X][DIM_Y] = {1,2,3,6,7};
 }
 
+#define M 2
+#define N 3
 void revert(void)
 {
+    int a[M][N] = {{1,2,3}, {4,5,6}}, b[N][M];
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            printf("%d ", a[i][j]);
+            b[j][i] =  a[i][j];
+        }
+        printf("\n");
+    }
 
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < M; j++)
+        {
+            printf("%d ", b[i][j]);
+        }
+        printf("\n");
+    }
+    exit(0);
+}
+
+void max(void)
+{
+     int a[M][N] = {{1,2,3}, {4,5,6}};
+     int max = a[0][0], row = 0, col = 0;
+
+     for (int i = 0; i < M; i++)
+     {
+          for (int j = 0; j < N; j++)
+          {
+              if (max <= a[i][j])
+              {
+                  max = a[i][j];
+                  row = i;
+                  col = j;
+              }
+          }
+     }
+     printf("max:[%d][%d] = %d\n", row, col, a[row][col]);
+}
+
+#define X  5
+#define Y  4
+void sum(void)
+{
+     int a[X][Y] = {{1,2,3}, {4,5,6},{7,8,9},{10,11,12}};
+
+    for (int i = 0; i < X - 1; i++)
+    {
+        for (int j = 0; j < Y - 1; j++)
+        {
+            a[X-1][Y-1] += a[i][j];
+            a[X-1][j] += a[i][j];
+            a[i][Y-1] += a[i][j];
+        }
+    }
+
+     for (int i = 0; i < X; i++)
+    {
+        for (int j = 0; j < Y; j++)
+        {
+            printf("%4d", a[i][j]);
+        }
+        printf("\n");
+    }
 }

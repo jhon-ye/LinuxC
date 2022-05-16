@@ -111,7 +111,10 @@ int main()
 	//selection_sort();
 
 	//base_converter();
-	prime_num();
+	//prime_num();
+	//revert();
+	// max();
+	sum();
 	return (0);
 }
 
