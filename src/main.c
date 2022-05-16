@@ -110,7 +110,8 @@ int main()
 
 	//selection_sort();
 
-	base_converter();
+	//base_converter();
+	prime_num();
 	return (0);
 }
 

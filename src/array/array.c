@@ -198,10 +198,32 @@ void base_converter(void)
         printf("%d", a[i]);
    }
    printf("\n");
+   return;
+}
 
-   
+#define PRIM 10001
+void prime_num(void)
+{
+    char primer[PRIM] = {0};
+    int i,j;
+    for (i = 2; i < PRIM; i++)
+    {
+        if (primer[i] == 0)
+        {
+            for (j = i*2; j < PRIM; j+=i)
+            {
+                primer[j] = -1; 
+            }
+        }
+    }
 
-
+    for (int i = 2; i < PRIM; i++)
+    {
+        if (primer[i] == 0)   
+            printf("%d ", i);
+    }
+    printf("\n");
+    return;
 }
 
 

@@ -9,4 +9,9 @@ void selection_sort(void);
 
 void base_converter(void);
 
+void prime_num(void);
+
+
+void revert(void);
+
 #endif
