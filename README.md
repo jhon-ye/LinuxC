@@ -28,3 +28,5 @@ Linux C Learn
 * gets
   * gets 很危险，对输入缓冲区不做任何校验 使用 fgets getline 代替
 * puts
+
+## 二维数组

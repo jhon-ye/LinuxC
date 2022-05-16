@@ -73,6 +73,7 @@
 #include "minipro/static.h"
 #include "io/test.h"
 #include "array/array.h"
+#include "char/char.h"
 
 // 修饰全局变量
 static int i = 100;
@@ -115,7 +116,9 @@ int main()
 	//revert();
 	// max();
 	// sum();
-	mul();
+	// mul();
+
+	char_func();
 	return (0);
 }
 
