@@ -30,3 +30,6 @@ Linux C Learn
 * puts
 
 ## 二维数组
+
+##指针
+![](src/img/point.png)

@@ -47,5 +47,4 @@ void char_func(void)
 
     char str_3[STR_LEN] = "abcd";
     printf("strncmp=%d\n", strncmp(str, str_2, strlen(str_3)));
-    
 }
