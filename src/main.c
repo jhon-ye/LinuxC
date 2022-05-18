@@ -74,6 +74,7 @@
 #include "io/test.h"
 #include "array/array.h"
 #include "char/char.h"
+#include "pointer/pointer.h"
 
 // 修饰全局变量
 static int i = 100;
@@ -118,7 +119,8 @@ int main()
 	// sum();
 	// mul();
 
-	char_func();
+	// char_func();
+	point_arr();
 	return (0);
 }
 

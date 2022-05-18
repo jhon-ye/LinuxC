@@ -29,7 +29,7 @@
  * 
  * i = 1;
  * p  = &i = 0x2000
- * *p = *(&i)
+ * *p = *(&i) = 1
  * 
  */
 
@@ -37,11 +37,35 @@
 #include<stdlib.h>
 #include "pointer.h"
 
-void point_test(void)
+static void point_test(void)
 {
     int i = 1;
     int *p = &i;
     int **q = &p;
 
+    int *a = NULL;
+    // 野指针
+    int *b;
+
+
+    //编程习惯
+    int *c = NULL;
+    // 空指针
+    void *d = NULL;
+    exit(0);
+}
+
+void point_arr(void)
+{
+    int a[3] = {1,2,3};
+    int *p = a;
+
+    for (unsigned long i = 0; i < sizeof(a)/sizeof(a[0]); i++)
+    {
+        printf("%p --- > %d\n", a+i, a[i]);
+        printf("%p --- > %d\n", p+i, *(p+i));
+    }
+    printf("\n");
+    exit(0);
 }
 
