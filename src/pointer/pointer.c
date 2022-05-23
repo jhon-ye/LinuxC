@@ -35,6 +35,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 #include "pointer.h"
 
 static void point_test(void)
@@ -79,8 +80,32 @@ void point_arr(void)
 void point_arr2(void)
 {
     int a[2][3] = {1,2,3,4,5,6};
-    int **p = a;
+    int i,j;
+    int *p = &a[0][0];
 
+#if 0
+    //int *q[3] -> int[3] *q = a;
+    int *q[3] = a;
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+           printf("%p-----> %d\n", *(q+i) + j, *(*(q+i)+ j));
+        }
+        printf("\n");
+    }
+#endif
+
+#if 0
+    for (int i = 0; i < 6; i++, p++)
+    {
+       printf("%p---->%d\n", p, *p);
+    }
+    printf("\n");
+    
+#endif
+
+#if 0
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -89,6 +114,33 @@ void point_arr2(void)
         }
         printf("\n");
     }
+ #endif   
     exit(0);
+}
+
+void point_char(void)
+{
+
+
+#if 0
+// 段错误，str 指针指向一个 字符串常
+//  char str[6] = {'h','e','l','l','o'};
+//  char *p_str = &str[0];
+
+    char *str = "hello";
+    printf("%d  %d", sizeof(str), strlen(str));
+    str = "world"; 
+    //strcpy(str, "world"); 此语句是错误的， str代表的是一个指针，不能使用字符数组赋值既不能直接将字符串常量赋值给一个指针
+
+#endif
+
+    // 此时 str 是一个 已分配好的 内存空间
+    char str[] = "hello";
+
+    // 不可以直接赋值
+    //str = "world"; 此时 str 代表一个字符数组指针，不能将一个字符串常量直接赋值给一个指针
+    printf("%d  %d", sizeof(str), strlen(str));
+    strcpy(str, "world");
+    puts(str);
 }
 
