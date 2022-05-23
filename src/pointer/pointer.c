@@ -69,3 +69,26 @@ void point_arr(void)
     exit(0);
 }
 
+
+/**
+ * @brief 
+ * 
+ * int [2][3] = {1,2,3,4,5,6}
+ * int[i][j] = *(*(a+i) + j)
+ */
+void point_arr2(void)
+{
+    int a[2][3] = {1,2,3,4,5,6};
+    int **p = a;
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+           printf("%p-----> %d\n", *(a+i) + j, *(*(a+i) + j));
+        }
+        printf("\n");
+    }
+    exit(0);
+}
+

@@ -120,7 +120,8 @@ int main()
 	// mul();
 
 	// char_func();
-	point_arr();
+	// point_arr();
+	point_arr2();
 	return (0);
 }
 
